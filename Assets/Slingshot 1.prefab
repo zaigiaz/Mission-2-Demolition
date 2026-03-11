@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 6441128909117953261}
   - component: {fileID: 1913405811400552058}
   - component: {fileID: 8570370483475822759}
+  - component: {fileID: -927394779757485580}
   m_Layer: 0
   m_Name: Slingshot 1
   m_TagString: Untagged
@@ -267,6 +268,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &-927394779757485580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6488661058138345094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1119c47de50e4dc1b18192ba3be0835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7398452828788531347
 GameObject:
   m_ObjectHideFlags: 0
