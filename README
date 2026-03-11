@@ -1,3 +1,7 @@
 # overview
 this is the repo for my Mission-2 Demoltion project for my Game Development class.
-This is a clone of the angry birds game for the Unity Engine.
+This is a clone of the angry birds game for the Unity Engine. Featuring Physics and other
+new features to play around with.
+
+  the main directory is in Mission-Demolition Folder and all the Unity assets will be in there.
+There is also a WebGL available at my github page: 
