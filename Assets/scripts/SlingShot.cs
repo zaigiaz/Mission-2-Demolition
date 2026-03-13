@@ -5,11 +5,10 @@ using UnityEngine;
 public class SlingShot : MonoBehaviour
 {
 
-    [Header(" Set in Inspector ")]
+    static private SlingShot S;
+
     public GameObject prefabProjectile;
     public float velocityMult = 8f;
-
-    [Header(" Set Dynamically ")]
 
     public Vector3 launchPos;
     public GameObject launchPoint;
@@ -19,9 +18,16 @@ public class SlingShot : MonoBehaviour
     private Rigidbody projectileRigidBody;
     
 
+    static public Vector3 LAUNCH_POS {
+	get {
+	    if(S == null) return Vector3.zero;
+	    return S.launchPos;
+	    }
+	}
 
     void Awake() {
-	Transform launchPointTrans = transform.Find("LaunchPoint");
+    S = this;
+    Transform launchPointTrans = transform.Find("LaunchPoint");
 	launchPoint = launchPointTrans.gameObject;
 	launchPoint.SetActive(false); 	
 	launchPos = launchPointTrans.position;
@@ -71,8 +77,5 @@ public class SlingShot : MonoBehaviour
 	    FollowCam.POI = projectile;
 	    projectile = null;
 	}
-
     }
-
-
 }
