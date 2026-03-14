@@ -54,7 +54,7 @@ public class MissionDemolition : MonoBehaviour
 	castle.transform.position = castlePos;
 	shotsTaken = 0;
 
-	SwitchView("wShow Both");
+	SwitchView("Show Both");
 	ProjectileLine.S.Clear();
 
 	Goal.goalMet = false;
@@ -66,7 +66,7 @@ public class MissionDemolition : MonoBehaviour
 
     
     void UpdateGUI() {
-	uitLevel.text = "Level: " + (level+ 1) + "of " + levelMax;
+	uitLevel.text = "Level: " + (level + 1) + "of " + levelMax;
 	uitShots.text = "Shots Taken: " + shotsTaken;
     }
 
@@ -121,3 +121,4 @@ public class MissionDemolition : MonoBehaviour
 	S.shotsTaken++; 
     } 
 }
+
