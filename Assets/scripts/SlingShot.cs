@@ -91,10 +91,9 @@ void LateUpdate()
 {
     if (band == null ||  leftPost == null || rightPost == null) return;
 
-
     band.SetPosition(0, leftPost.position);
 
-    band.SetPosition(, rightPost.position);
+    band.SetPosition(2, rightPost.position);
 
     if (projectile != null)
     {
