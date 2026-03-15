@@ -7,6 +7,10 @@ public class SlingShot : MonoBehaviour
 
     static private SlingShot S;
 
+    public Transform leftPost;
+    public Transform rightPost;
+    public LineRenderer band;
+
     public GameObject prefabProjectile;
     public float velocityMult = 8f;
 
@@ -81,4 +85,26 @@ public class SlingShot : MonoBehaviour
 	    ProjectileLine.S.poi = projectile;
 	}
     }
+
+
+void LateUpdate()
+{
+    if (band == null ||  leftPost == null || rightPost == null) return;
+
+
+    band.SetPosition(0, leftPost.position);
+
+    band.SetPosition(, rightPost.position);
+
+    if (projectile != null)
+    {
+        band.SetPosition(1, projectile.transform.position);
+    }
+    else
+    {
+        Vector3 mid = (leftPost.position + rightPost.position) * 0.5f;
+        band.SetPosition(1, mid);
+    }
+}
+
 }
